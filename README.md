@@ -1,8 +1,10 @@
-## Deprem API
+# Deprem API
 
 Türkiye'de meydana gelen son depremleri çeker.
 
-# Özellikler
+***
+
+## Özellikler
 
 - Javascript kullanılarak yapılmıştır, ayrıca puppeteer teknolojisi kullanılmıştır.
 - Depremin büyüklüğü, tarihi, lokasyonu, derinliğini, enlem ve boylam değerlerini JSON tipinde geri döndürür.
