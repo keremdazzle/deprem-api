@@ -1,4 +1,4 @@
-# Deprem API
+# Deprem Api
 
 Türkiye'de meydana gelen son depremleri çeker.
 
