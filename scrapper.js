@@ -1,17 +1,11 @@
-const puppeteer = require("puppeteer-core");
-const chrome = require("chrome-aws-lambda");
-const { executablePath } = require("puppeteer");
+const puppeteer = require("puppeteer");
 
 const scrapper = async () => {
   const browser = await puppeteer.launch({
-    args: [...chrome.args, "--hide-scrollbars", "--disable-web-security"],
-    defaultViewport: chrome.defaultViewport,
-    executablePath: await executablePath(),
     headless: true,
-    ignoreHTTPSErrors: true,
   });
   const page = await browser.newPage();
-  await page.goto("https://deprem.afad.gov.tr/last-earthquakes.html");
+  await page.goto("https://deprem.afad.gov.tr/last-earthquakes");
 
   const data = await page.evaluate(function () {
     const events = document.querySelectorAll("tbody>tr");
